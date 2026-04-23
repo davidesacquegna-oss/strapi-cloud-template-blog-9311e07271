@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_contact_strips",
+  "info": {
+    "displayName": "Contact_Strip"
+  },
+  "options": {},
+  "attributes": {
+    "Titolo": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Sfondo_Colore": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

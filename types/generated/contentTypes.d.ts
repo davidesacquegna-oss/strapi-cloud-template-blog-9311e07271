@@ -623,14 +623,11 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     SiteContent: Schema.Attribute.DynamicZone<
       [
-        'shared.slider',
-        'shared.rich-text',
-        'shared.quote',
-        'shared.media',
-        'shared.button',
-        'shared.card',
-        'shared.cta',
-        'shared.seo',
+        'shared.hero',
+        'shared.project-grid',
+        'shared.about-section',
+        'shared.contact-strip',
+        'shared.tech-stack',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

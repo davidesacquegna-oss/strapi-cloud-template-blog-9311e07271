@@ -1,17 +1,17 @@
 {
-  "collectionName": "components_shared_cards",
+  "collectionName": "components_shared_about_sections",
   "info": {
-    "displayName": "Card"
+    "displayName": "AboutSection"
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "Titolo": {
       "type": "string"
     },
-    "Description": {
-      "type": "string"
+    "Testo": {
+      "type": "blocks"
     },
-    "Image": {
+    "Foto": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -21,10 +21,8 @@
         "audios"
       ]
     },
-    "CTAbutton": {
-      "type": "component",
-      "component": "shared.button",
-      "repeatable": false
+    "Layout_Invertito": {
+      "type": "boolean"
     }
   },
   "config": {}

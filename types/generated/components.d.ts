@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedAboutSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_about_sections';
+  info: {
+    displayName: 'AboutSection';
+  };
+  attributes: {
+    Foto: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Layout_Invertito: Schema.Attribute.Boolean;
+    Testo: Schema.Attribute.Blocks;
+    Titolo: Schema.Attribute.String;
+  };
+}
+
 export interface SharedButton extends Struct.ComponentSchema {
   collectionName: 'components_shared_buttons';
   info: {
@@ -22,10 +35,22 @@ export interface SharedCard extends Struct.ComponentSchema {
     displayName: 'Card';
   };
   attributes: {
-    button: Schema.Attribute.Component<'shared.button', false>;
+    CTAbutton: Schema.Attribute.Component<'shared.button', false>;
     Description: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedContactStrip extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contact_strips';
+  info: {
+    displayName: 'Contact_Strip';
+  };
+  attributes: {
+    Email: Schema.Attribute.Email;
+    Sfondo_Colore: Schema.Attribute.String;
+    Titolo: Schema.Attribute.String;
   };
 }
 
@@ -39,6 +64,22 @@ export interface SharedCta extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    Call_to_Action: Schema.Attribute.Component<'shared.button', true>;
+    ImmagineSfondo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Sottotitolo: Schema.Attribute.String;
+    TItolo: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -46,7 +87,19 @@ export interface SharedMedia extends Struct.ComponentSchema {
     icon: 'file-video';
   };
   attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    ImmagineSfondo: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedProjectGrid extends Struct.ComponentSchema {
+  collectionName: 'components_shared_project_grids';
+  info: {
+    displayName: 'ProjectGrid';
+  };
+  attributes: {
+    Mostra_Filtri: Schema.Attribute.Boolean;
+    Numero_Elementi: Schema.Attribute.Integer;
+    Titolo_Sezione: Schema.Attribute.String;
   };
 }
 
@@ -70,7 +123,7 @@ export interface SharedRichText extends Struct.ComponentSchema {
     icon: 'align-justify';
   };
   attributes: {
-    body: Schema.Attribute.RichText;
+    Bio: Schema.Attribute.RichText;
   };
 }
 
@@ -97,21 +150,52 @@ export interface SharedSlider extends Struct.ComponentSchema {
     icon: 'address-book';
   };
   attributes: {
-    files: Schema.Attribute.Media<'images', true>;
+    CaroselloProgetti: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface SharedTechStack extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tech_stacks';
+  info: {
+    displayName: 'TechStack';
+  };
+  attributes: {
+    Skills: Schema.Attribute.Enumeration<
+      [
+        'Wordpress',
+        'Microsoft Fabric',
+        'Power BI',
+        'Python',
+        'Langchain',
+        'Node.js',
+        'Angular',
+        'SQL',
+        'HTML5-CSS3',
+        'GIT',
+        'Restful APIs',
+        'UX-UI',
+      ]
+    >;
+    Titolo_Sezione: Schema.Attribute.String;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.about-section': SharedAboutSection;
       'shared.button': SharedButton;
       'shared.card': SharedCard;
+      'shared.contact-strip': SharedContactStrip;
       'shared.cta': SharedCta;
+      'shared.hero': SharedHero;
       'shared.media': SharedMedia;
+      'shared.project-grid': SharedProjectGrid;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.tech-stack': SharedTechStack;
     }
   }
 }

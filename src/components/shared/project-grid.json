@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_project_grids",
+  "info": {
+    "displayName": "ProjectGrid"
+  },
+  "options": {},
+  "attributes": {
+    "Titolo_Sezione": {
+      "type": "string"
+    },
+    "Numero_Elementi": {
+      "type": "integer"
+    },
+    "Mostra_Filtri": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}
