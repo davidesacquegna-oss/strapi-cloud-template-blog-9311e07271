@@ -71,10 +71,13 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
   attributes: {
     Call_to_Action: Schema.Attribute.Component<'shared.button', true>;
+    Claim: Schema.Attribute.String;
+    CTA_2: Schema.Attribute.Component<'shared.button', false>;
     ImmagineSfondo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    Photo_Tag: Schema.Attribute.String;
     Sottotitolo: Schema.Attribute.String;
     TItolo: Schema.Attribute.String;
   };

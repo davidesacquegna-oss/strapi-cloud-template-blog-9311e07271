@@ -25,6 +25,17 @@
       "type": "component",
       "component": "shared.button",
       "repeatable": true
+    },
+    "Photo_Tag": {
+      "type": "string"
+    },
+    "CTA_2": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    },
+    "Claim": {
+      "type": "string"
     }
   },
   "config": {}
