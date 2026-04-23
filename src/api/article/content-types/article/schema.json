@@ -59,6 +59,11 @@
       "relation": "oneToOne",
       "target": "api::project.project",
       "inversedBy": "article"
+    },
+    "Button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
     }
   }
 }
