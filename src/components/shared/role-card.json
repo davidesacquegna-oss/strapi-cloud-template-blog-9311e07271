@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_role_cards",
+  "info": {
+    "displayName": "Role_Card"
+  },
+  "options": {},
+  "attributes": {
+    "Role_Title": {
+      "type": "string"
+    },
+    "Role_Text": {
+      "type": "string"
+    },
+    "Role_Icon": {
+      "type": "string"
+    },
+    "Card_Background": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

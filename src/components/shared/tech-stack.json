@@ -8,22 +8,8 @@
     "Titolo_Sezione": {
       "type": "string"
     },
-    "Skills": {
-      "type": "enumeration",
-      "enum": [
-        "Wordpress",
-        "Microsoft Fabric",
-        "Power BI",
-        "Python",
-        "Langchain",
-        "Node.js",
-        "Angular",
-        "SQL",
-        "HTML5-CSS3",
-        "GIT",
-        "Restful APIs",
-        "UX-UI"
-      ]
+    "Skills_Array": {
+      "type": "json"
     }
   },
   "config": {}

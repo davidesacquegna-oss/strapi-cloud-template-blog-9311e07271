@@ -36,6 +36,16 @@
     },
     "Claim": {
       "type": "string"
+    },
+    "AboutSection": {
+      "type": "component",
+      "component": "shared.about-section",
+      "repeatable": false
+    },
+    "TechStack": {
+      "type": "component",
+      "component": "shared.tech-stack",
+      "repeatable": false
     }
   },
   "config": {}

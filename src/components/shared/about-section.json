@@ -8,21 +8,19 @@
     "Titolo": {
       "type": "string"
     },
-    "Testo": {
-      "type": "blocks"
+    "Bio": {
+      "type": "text"
     },
-    "Foto": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "Quote_1": {
+      "type": "string"
     },
-    "Layout_Invertito": {
-      "type": "boolean"
+    "Quote_2": {
+      "type": "string"
+    },
+    "Role_Card": {
+      "type": "component",
+      "component": "shared.role-card",
+      "repeatable": true
     }
   },
   "config": {}

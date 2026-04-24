@@ -6,9 +6,10 @@ export interface SharedAboutSection extends Struct.ComponentSchema {
     displayName: 'AboutSection';
   };
   attributes: {
-    Foto: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Layout_Invertito: Schema.Attribute.Boolean;
-    Testo: Schema.Attribute.Blocks;
+    Bio: Schema.Attribute.Text;
+    Quote_1: Schema.Attribute.String;
+    Quote_2: Schema.Attribute.String;
+    Role_Card: Schema.Attribute.Component<'shared.role-card', true>;
     Titolo: Schema.Attribute.String;
   };
 }
@@ -70,6 +71,7 @@ export interface SharedHero extends Struct.ComponentSchema {
     displayName: 'Hero';
   };
   attributes: {
+    AboutSection: Schema.Attribute.Component<'shared.about-section', false>;
     Call_to_Action: Schema.Attribute.Component<'shared.button', true>;
     Claim: Schema.Attribute.String;
     CTA_2: Schema.Attribute.Component<'shared.button', false>;
@@ -79,6 +81,7 @@ export interface SharedHero extends Struct.ComponentSchema {
     >;
     Photo_Tag: Schema.Attribute.String;
     Sottotitolo: Schema.Attribute.String;
+    TechStack: Schema.Attribute.Component<'shared.tech-stack', false>;
     TItolo: Schema.Attribute.String;
   };
 }
@@ -130,6 +133,19 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRoleCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_role_cards';
+  info: {
+    displayName: 'Role_Card';
+  };
+  attributes: {
+    Card_Background: Schema.Attribute.String;
+    Role_Icon: Schema.Attribute.String;
+    Role_Text: Schema.Attribute.String;
+    Role_Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -163,22 +179,7 @@ export interface SharedTechStack extends Struct.ComponentSchema {
     displayName: 'TechStack';
   };
   attributes: {
-    Skills: Schema.Attribute.Enumeration<
-      [
-        'Wordpress',
-        'Microsoft Fabric',
-        'Power BI',
-        'Python',
-        'Langchain',
-        'Node.js',
-        'Angular',
-        'SQL',
-        'HTML5-CSS3',
-        'GIT',
-        'Restful APIs',
-        'UX-UI',
-      ]
-    >;
+    Skills_Array: Schema.Attribute.JSON;
     Titolo_Sezione: Schema.Attribute.String;
   };
 }
@@ -196,6 +197,7 @@ declare module '@strapi/strapi' {
       'shared.project-grid': SharedProjectGrid;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
+      'shared.role-card': SharedRoleCard;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.tech-stack': SharedTechStack;

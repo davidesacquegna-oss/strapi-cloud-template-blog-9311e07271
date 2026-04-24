@@ -29,6 +29,26 @@
         "shared.contact-strip",
         "shared.tech-stack"
       ]
+    },
+    "AboutSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.about-section",
+      "repeatable": false
+    },
+    "TechStack": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.tech-stack",
+      "repeatable": false
     }
   }
 }

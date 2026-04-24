@@ -612,6 +612,12 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    AboutSection: Schema.Attribute.Component<'shared.about-section', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -630,6 +636,12 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
         'shared.tech-stack',
       ]
     > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    TechStack: Schema.Attribute.Component<'shared.tech-stack', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
