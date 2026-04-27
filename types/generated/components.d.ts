@@ -94,6 +94,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     ImmagineSfondo: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    Titolo: Schema.Attribute.String;
   };
 }
 

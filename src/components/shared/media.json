@@ -6,6 +6,9 @@
   },
   "options": {},
   "attributes": {
+    "Titolo": {
+      "type": "string"
+    },
     "ImmagineSfondo": {
       "type": "media",
       "multiple": false,
