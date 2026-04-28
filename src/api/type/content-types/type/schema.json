@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "Nome": {
+    "Tipo": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
