@@ -17,6 +17,16 @@
         "files",
         "videos"
       ]
+    },
+    "logo_animation": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
