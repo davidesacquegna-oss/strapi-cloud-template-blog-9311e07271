@@ -101,6 +101,17 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedMenuLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_menu_links';
+  info: {
+    displayName: 'MenuLink';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface SharedProjectGrid extends Struct.ComponentSchema {
   collectionName: 'components_shared_project_grids';
   info: {
@@ -198,6 +209,7 @@ declare module '@strapi/strapi' {
       'shared.cta': SharedCta;
       'shared.hero': SharedHero;
       'shared.media': SharedMedia;
+      'shared.menu-link': SharedMenuLink;
       'shared.project-grid': SharedProjectGrid;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
